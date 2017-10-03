@@ -14,6 +14,8 @@ BTW this is Applescript:
 - The remote backend does not need to understand / enable CORS.
 - But you might need to disable the CSRF check at the backend.
 
+It has been tested with an AngularJs 1.6 based UI and a Spring Boot 1.5 backend.
+
 **Beware:** this browser instance is really insecure!
 It should be used for development purposes with trusted backends only.
 
