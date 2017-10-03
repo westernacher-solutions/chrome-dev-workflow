@@ -1,15 +1,21 @@
-# chrome-dev-workflow: fast / local web development using chrome in insecure mode
+# fast / local web development using chrome in insecure mode (on OS X)
 
 The file [ChromeInsecure.zip](ChromeInsecure.zip?raw=true) can be unzipped anywhere e.g. on your desktop.
 It contains a Mac OS X application that runs Chrome with the following parameters.
-This is Applescript:
+BTW this is Applescript:
 
     set chrome to "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\""
     set userdatadir to "\"$HOME/Library/Application Support/Google/ChromeInsecure\""
     do shell script chrome & " --allow-file-access-from-files --disable-web-security --user-data-dir=" & userdatadir
 
-Such a setup allows opening local files in the browser including local Javascript + CSS and still calling remote Json services.
-No local backend server is needed.
-No local Http proxy to the remote backend is needed.
-The remote backend does not need to understand / enable CORS.
-You might need to disable the CSRF check at the backend.
+- Such a setup allows opening local files in the browser using the file: protocol and still allows calling remote Json or other services.
+- No local backend server is needed.
+- No local Http server and/or proxy is needed.
+- The remote backend does not need to understand / enable CORS.
+- But you might need to disable the CSRF check at the backend.
+
+**Beware:** this browser instance is really insecure!
+It should be used for development purposes with trusted backends only.
+
+Adaptations for other operating systems are welcome.
+Feel free to open a pull request.
