@@ -1,7 +1,8 @@
 # chrome-dev-workflow: fast / local web development using chrome in insecure mode
 
 The file [ChromeInsecure.zip](ChromeInsecure.zip?raw=true) can be unzipped anywhere e.g. on your desktop.
-It contains a Mac OS X application that runs Chrome with the following parameters:
+It contains a Mac OS X application that runs Chrome with the following parameters.
+This is Applescript:
 
     set chrome to "\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\""
     set userdatadir to "\"$HOME/Library/Application Support/Google/ChromeInsecure\""
