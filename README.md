@@ -8,9 +8,9 @@ BTW this is Applescript:
     set userdatadir to "\"$HOME/Library/Application Support/Google/ChromeInsecure\""
     do shell script chrome & " --allow-file-access-from-files --disable-web-security --user-data-dir=" & userdatadir
 
-- Such a setup allows opening local files in the browser using the file: protocol and still allows calling remote Json or other services.
+- Such a setup allows opening local files in the browser using the file: protocol and still allows calling remote JSON or other services.
 - No local backend server is needed.
-- No local Http server and/or proxy is needed.
+- No local HTTP server and/or proxy is needed.
 - The remote backend does not need to understand / enable CORS.
 - But you might need to disable the CSRF check at the backend.
 
